@@ -1,0 +1,4 @@
+sub1.example.com
+sub2.example.com
+api.example.com
+dev.example.com
