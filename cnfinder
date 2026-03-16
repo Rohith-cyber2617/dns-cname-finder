@@ -38,10 +38,12 @@ def check_cname(domain):
     except Exception as e:
         return f"[!] Error checking {domain}: {str(e)}"
 
+
 def process_single_target(target):
     print(f"\n[*] Checking: {target}")
     print("-" * 50)
     print(check_cname(target))
+
 
 def process_list_file(file_path):
     try:
@@ -59,11 +61,12 @@ def process_list_file(file_path):
         print(f"[!] File not found: {file_path}")
         sys.exit(1)
 
+
 def main():
     banner()
 
     parser = argparse.ArgumentParser(
-        description="DNS CNAME Finder Tool",
+        description="DNS CNAME Finder Tool - Discover CNAME records for domains and subdomains",
         epilog="""
 Examples:
 
@@ -88,8 +91,10 @@ Examples:
 
     if args.url:
         process_single_target(args.url)
+
     elif args.list:
         process_list_file(args.list)
+
 
 if __name__ == "__main__":
     main()
