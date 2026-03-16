@@ -66,10 +66,18 @@ def main():
         description="DNS CNAME Finder Tool",
         epilog="""
 Examples:
-  cnfinder -u https://subdomain.example.com
-  cnfinder -u subdomain.example.com
-  cnfinder -l subdomains.txt
-        """
+
+  Single target:
+    cnfinder -u https://subdomain.example.com
+    cnfinder -u subdomain.example.com
+
+  List of targets:
+    cnfinder -l subdomains.txt
+
+  Save output to file:
+    cnfinder -u example.com > output.txt
+    cnfinder -l subdomains.txt > output.txt
+"""
     )
 
     group = parser.add_mutually_exclusive_group(required=True)
