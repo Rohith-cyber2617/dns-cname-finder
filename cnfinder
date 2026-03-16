@@ -4,6 +4,7 @@ import subprocess
 import sys
 import argparse
 
+
 def banner():
     print(r"""
   ____ _   _       _____ _           _
@@ -16,6 +17,7 @@ By Author: Tony (Rachapudi Rohith)
 LinkedIn: https://www.linkedin.com/in/rohithrachapudi96
 ----------------------------------------------------
 """)
+
 
 def check_cname(domain):
     try:
@@ -67,6 +69,7 @@ def main():
 
     parser = argparse.ArgumentParser(
         description="DNS CNAME Finder Tool - Discover CNAME records for domains and subdomains",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
 
