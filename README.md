@@ -1,32 +1,57 @@
-# DNS CNAME Finder
+# 🔎 DNS CNAME Finder
 
-A lightweight tool for discovering **DNS CNAME records** from single domains or large subdomain lists.
+![Python](https://img.shields.io/badge/python-3.x-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Security Tool](https://img.shields.io/badge/category-security%20tool-red)
+![Status](https://img.shields.io/badge/status-stable-brightgreen)
 
-Designed for **Bug Bounty Hunters, Pentesters, and Security Researchers.**
+A lightweight and fast **DNS CNAME reconnaissance tool** designed for **Bug Bounty Hunters, Pentesters, and Security Researchers**.
+
+`dns-cname-finder` helps identify **CNAME records** for domains or large subdomain lists during reconnaissance and subdomain takeover analysis.
 
 ---
 
-## Author
+# 👨‍💻 Author
 
-Tony (Rachapudi Rohith)
+**Tony (Rachapudi Rohith)**  
 
-LinkedIn  
+🔗 LinkedIn  
 https://www.linkedin.com/in/rohithrachapudi96
 
 ---
 
-## Features
+# ⚡ Features
 
-- Fast DNS CNAME lookup
-- Scan a single domain
-- Scan a list of subdomains
-- Clean terminal output
-- Works globally from any directory
-- Simple and lightweight
+✅ Fast DNS CNAME lookup  
+✅ Scan a **single domain**  
+✅ Scan **large subdomain lists**  
+✅ Clean terminal output  
+✅ Works globally from **any directory**  
+✅ Lightweight (no external Python dependencies)  
+✅ Perfect for **bug bounty reconnaissance**
 
 ---
 
-## Repository Structure
+# 🧰 Tool Preview
+
+```bash
+cnfinder -h
+```
+
+```
+  ____ _   _       _____ _           _
+ / ___| \ | |     |  ___(_)_ __   __| | ___ _ __
+| |   |  \| |_____| |_  | | '_ \ / _` |/ _ \ '__|
+| |___| |\  |_____|  _| | | | | | (_| |  __/ |
+ \____|_| \_|     |_|   |_|_| |_|\__,_|\___|_|
+
+By Author: Tony (Rachapudi Rohith)
+LinkedIn: https://www.linkedin.com/in/rohithrachapudi96
+```
+
+---
+
+# 📂 Repository Structure
 
 ```
 dns-cname-finder
@@ -40,7 +65,7 @@ dns-cname-finder
 
 ---
 
-## Installation
+# ⚙️ Installation
 
 Clone the repository
 
@@ -64,61 +89,70 @@ sudo ./install.sh
 
 ---
 
-## Verify Installation
+# ✅ Verify Installation
 
-After installation the command should work globally.
+After installation the tool should work globally.
 
-```
+```bash
 cnfinder -h
 ```
 
 Example:
 
-```
+```bash
 cnfinder -u example.com
 ```
 
 ---
 
-## Usage
+# 🚀 Usage
 
-Scan a single domain
+## Scan a Single Domain
 
-```
+```bash
 cnfinder -u example.com
 ```
 
-Scan using a URL
+## Scan a URL
 
-```
+```bash
 cnfinder -u https://sub.example.com
 ```
 
-Scan a list of domains
+## Scan a List of Subdomains
 
-```
+```bash
 cnfinder -l subdomains.txt
 ```
 
----
-
-## Saving Output
-
-You can redirect the output to a file.
-
-Single target
+Example list format:
 
 ```
+sub1.example.com
+api.example.com
+dev.example.com
+test.example.com
+```
+
+---
+
+# 💾 Saving Output
+
+Results can be redirected to a file.
+
+### Save Single Scan
+
+```bash
 cnfinder -u example.com > output.txt
 ```
 
-List scan
+### Save List Scan
 
-```
+```bash
 cnfinder -l subdomains.txt > output.txt
 ```
 
-Example output file
+Example output file:
 
 ```
 [+] sub.example.com -> cname.target.com
@@ -127,25 +161,54 @@ Example output file
 
 ---
 
-## Example Output
+# 📊 Example Output
 
 ```
-[+] sub.example.com -> cname.target.com
+[*] Checking: example.com
+--------------------------------------------------
+[+] blog.example.com -> cname.hostingprovider.com
 [-] dev.example.com - No CNAME record
 ```
 
 ---
 
-## Note
+# 🛠 Use Cases
 
-If the command does not run after cloning, ensure the script is executable.
+This tool is useful during:
 
-```
+- 🔎 Bug bounty reconnaissance
+- 🌐 DNS infrastructure analysis
+- 🧠 Subdomain takeover hunting
+- 🕵️ Red team reconnaissance
+- 📡 Attack surface mapping
+
+---
+
+# ⚠️ Note
+
+If the command does not execute after cloning, ensure the script has execution permission.
+
+```bash
 chmod +x cnfinder
 ```
 
 ---
 
-## License
+# 📜 License
 
 MIT License
+
+Copyright (c) 2026  
+Tony (Rachapudi Rohith)
+
+Permission is hereby granted to use, modify, and distribute this software.
+
+---
+
+# ⭐ Support
+
+If you find this tool useful, consider giving the repository a **star ⭐**.
+
+It helps other security researchers discover the project.
+
+---
