@@ -1,6 +1,8 @@
 # DNS CNAME Finder
 
-Simple tool for discovering **DNS CNAME records** for bug bounty and reconnaissance.
+A lightweight tool for discovering **DNS CNAME records** from single domains or large subdomain lists.
+
+Designed for **Bug Bounty Hunters, Pentesters, and Security Researchers.**
 
 ---
 
@@ -16,55 +18,111 @@ https://www.linkedin.com/in/rohithrachapudi96
 ## Features
 
 - Fast DNS CNAME lookup
-- Single domain scanning
-- Bulk subdomain scanning
+- Scan a single domain
+- Scan a list of subdomains
 - Clean terminal output
-- Global command support
+- Works globally from any directory
+- Simple and lightweight
+
+---
+
+## Repository Structure
+
+```
+dns-cname-finder
+│
+├── cnfinder
+├── install.sh
+├── README.md
+├── LICENSE
+└── example_subdomains.txt
+```
 
 ---
 
 ## Installation
 
-Clone repository
+Clone the repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/dns-cname-finder.git
 cd dns-cname-finder
 ```
 
+Give execution permission
+
+```bash
+chmod +x cnfinder
+chmod +x install.sh
+```
+
 Run installer
 
 ```bash
-chmod +x install.sh
 sudo ./install.sh
+```
+
+---
+
+## Verify Installation
+
+After installation the command should work globally.
+
+```
+cnfinder -h
+```
+
+Example:
+
+```
+cnfinder -u example.com
 ```
 
 ---
 
 ## Usage
 
-Single target
+Scan a single domain
 
-```bash
+```
 cnfinder -u example.com
 ```
 
-URL target
+Scan using a URL
 
-```bash
+```
 cnfinder -u https://sub.example.com
 ```
 
-List scanning
+Scan a list of domains
 
-```bash
+```
 cnfinder -l subdomains.txt
 ```
 
-Help
+---
 
-```bash
-cnfinder -h
+## Saving Output
+
+You can redirect the output to a file.
+
+Single target
+
+```
+cnfinder -u example.com > output.txt
+```
+
+List scan
+
+```
+cnfinder -l subdomains.txt > output.txt
+```
+
+Example output file
+
+```
+[+] sub.example.com -> cname.target.com
+[-] dev.example.com - No CNAME record
 ```
 
 ---
@@ -74,6 +132,16 @@ cnfinder -h
 ```
 [+] sub.example.com -> cname.target.com
 [-] dev.example.com - No CNAME record
+```
+
+---
+
+## Note
+
+If the command does not run after cloning, ensure the script is executable.
+
+```
+chmod +x cnfinder
 ```
 
 ---
