@@ -7,6 +7,6 @@ chmod +x cnfinder
 sudo mv cnfinder /usr/local/bin/
 
 echo "[+] Installation complete."
-echo "[+] You can now run the tool globally using:"
+echo "[+] You can now run the tool globally:"
 echo ""
 echo "cnfinder -h"
