@@ -70,7 +70,7 @@ dns-cname-finder
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dns-cname-finder.git
+git clone https://github.com/Rohith-cyber2617/dns-cname-finder.git
 cd dns-cname-finder
 ```
 
